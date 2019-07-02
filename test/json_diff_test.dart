@@ -41,7 +41,7 @@ void main() {
 
   test('JsonDiffer ensureIdentical raises', () {
     expect(() => necksDiffer.ensureIdentical(['owner']),
-           throwsA(new isInstanceOf<UncomparableJsonException>()));
+           throwsA(isA<UncomparableJsonException>()));
   });
 
   test('JsonDiffer diff() identical objects', () {
